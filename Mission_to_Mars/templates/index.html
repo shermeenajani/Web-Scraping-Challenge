@@ -17,21 +17,53 @@
       <p><a class="btn btn-primary btn-lg" href="/scrape" role="button">Retrieve Mars Data</a></p>
     </div>
 
-    <!-- Mars Data -->
+    <!-- Mars Data 1-->
     <div class="row" id="marsdata">
       <div class="col-md-12">
+        <h1 class="heading">Latest Mars News </h1>
         <h4 class="heading">{{mars_parameters.mars_news_title}} </h4>
         <small>{{mars_parameters.mars_news_paragraph}}</small>
       </div>
     </div>
 
-    <!-- Mars Data -->
+    <!-- Mars Data 2 and 3-->
     <div class="row" id="marsdata">
-      <div class="col-md-12">
-        <h4 class="heading">Mars Facts </h4>
+      <div class="col-md-8">
+        <h1 class="heading">Featured Mars Image </h1>
+        <a href='{{mars_image1}}'>
+          </picture>
+            <img src="{{mars_parameters.mars_image1}}">
+          </picture>
+        <a>
+      </div>
+      <div class="col-md-4">
+        <h1 class="heading">Mars Facts </h1>
         {{mars_parameters.mars_facts_html|safe}}
       </div>
     </div>
+
+
+    <!-- Mars Data 4a-->
+    <div class="row" id="marsdata">
+      <div class="col-md-12">
+        <center>
+          <h1 class="heading">Mars Hemisphere </h1>
+        <center>
+      </div>
+    </div>
+
+    <!-- Mars Data 4b-->
+    <div class="row" id="marsdata">
+      <div class="col-md-3">
+        <div class="card"></div>
+          <a href="{{mars_parameters.mars_hemisphere_images[0].imgurl}}">
+            <img src="{{mars_parameters.mars_hemisphere_images[0].imgurl}}" class="img-thumbnail" alt="{{mars_parameters.mars_hemisphere_images[0].title}}">
+          <a>
+          <div class="card-body">
+            <h4 class="card-title">{{mars_parameters.mars_hemisphere_images[0].title}}</h4>
+          </div>
+        <div>
+      </div>
 
   </div>
 </body>
